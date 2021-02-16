@@ -1,12 +1,20 @@
-import requests
+import requests as rq
 
-pokemon = input("Digite o nome de um pokemon: ")
-url = f"https://pokeapi.co/api/v2/pokemon/{pokemon}"
-req = requests.get(url)
+pokemon = input('Digite o nome do pokemon: ')
+url =f'https://pokeapi.co/api/v2/pokemon/{pokemon}'
 
 try:
-  poke = req.json()
-  texto = f"O pokemon escolhido é o {poke['name']} e ele pesa {poke['height']}kg."
-  print(texto)  
+  req = rq.get(url)
+  poke_info = req.json()
+  habilidades = []
+
+  for i in poke_info['abilities']:
+    habilidades.append(i['ability']['name'])
+
+  habilidades = ', '.join(habilidades)
+
+  texto = f'Pokemon: {poke_info["name"]}\nHabilidades: {habilidades}\nPeso: {poke_info["height"]}kg'
+
+  print(texto)
 except:
-  print("Pokemon não encotrado.")
+  print('Pokemon não encontrado!')
