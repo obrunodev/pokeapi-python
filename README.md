@@ -1,2 +1,3 @@
-# pokeapi-python
-Repositório com código consumindo uma API do pokemon usando a linguagem Python
+# Usando PokeAPI com python
+
+Aprendendo a consumir uma API de pokemon usando a linguagem python.
