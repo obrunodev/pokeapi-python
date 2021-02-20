@@ -1,3 +1,15 @@
-# Usando PokeAPI com python
+# Consumindo PokeAPI com python
 
-Aprendendo a consumir uma API de pokemon usando a linguagem python.
+Teste de consumo de API do pokemon com python puro.
+
+### Requisitos:
+
+- Apenas módulo requests para efetuar requisições:
+
+```
+  pip install requests
+```
+
+[Código]('https://github.com/obrunodev/pokeapi-python/blob/main/app.py')
+
+[Testar script]('https://repl.it/@brunorpdev/pokeAPI#main.py')
